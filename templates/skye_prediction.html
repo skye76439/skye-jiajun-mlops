@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skye Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Optional: Add custom styles here */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Skye Prediction</h1>
+        <form class="mt-3" action="/predict" method="post">
+            <div class="form-group">
+                <label for="accommodates">Number of Accommodations:</label>
+                <input type="number" class="form-control" id="accommodates" name="accommodates" required>
+            </div>
+
+            <div class="form-group">
+                <label for="bathrooms">Number of Bathrooms:</label>
+                <input type="number" class="form-control" id="bathrooms" name="bathrooms" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="bedrooms">Number of Bedrooms:</label>
+                <input type="number" class="form-control" id="bedrooms" name="bedrooms" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="beds">Number of Beds:</label>
+                <input type="number" class="form-control" id="beds" name="beds" step="0.01" required>
+            </div>
+
+            <!-- Add more input fields for other features as needed -->
+
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+
+        {% if predicted_price %}
+        <h2 class="mt-5">Predicted Price: ${{ predicted_price }}</h2>
+        {% endif %}
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

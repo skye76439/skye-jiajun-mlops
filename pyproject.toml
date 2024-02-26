@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "skye"
+version = "0.1.0"
+description = "skye and jj"
+authors = ["skye76439 <skye76439@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "pycaret"
+pycaret = "^3.3.0"
+seaborn = "matplotlib"
+
+[tool.poetry.group.dev.dependencies]
+matplotlib = "^3.8.3"
+hydra-core = "^1.3.2"
+mlflow = "^2.10.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
